@@ -7,7 +7,7 @@ import ButtonGroup from './ButtonGroup';
 
 const BudgetSplitter = () => {
 
-    const [forms, setForms] = useState([{ expenses: [], total: null, result: null, noHead: null }]);
+    const [forms, setForms] = useState([{ expenses: [], total: null, result: null, noHead: '1' }]);
     const [activeFormIndex, setActiveFormIndex] = useState(0);
     const [isOverlayOpen, setIsOverlayOpen] = useState(false);
     const [blurOn, setBlurOn] = useState(false);
@@ -142,7 +142,7 @@ const BudgetSplitter = () => {
                                             type="number"
                                             name="noHead"
                                             placeholder='No. P'
-                                            min='0'
+                                            min='1'
                                             value={forms[activeFormIndex].noHead}
                                             onChange={(e) => handleHeadChange(e)}
                                             onSubmit={(e) => console.log(e)}
