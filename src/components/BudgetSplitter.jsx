@@ -1,5 +1,5 @@
 
-import React, { useState , useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../App.css';
 
 import ExpenseEntryForm from './ExpenseEntryForm';
@@ -10,16 +10,16 @@ const BudgetSplitter = () => {
     const [forms, setForms] = useState([{ expenses: [], total: null, result: null, noHead: null }]);
     const [activeFormIndex, setActiveFormIndex] = useState(0);
     const [isOverlayOpen, setIsOverlayOpen] = useState(false);
-    const [blurOn, setBlurOn ] = useState(false);
+    const [blurOn, setBlurOn] = useState(false);
 
     useEffect(() => {
         const rootDiv = document.getElementById('root');
         if (blurOn) {
-          rootDiv.className = 'blur';
+            rootDiv.className = 'blur';
         } else {
             rootDiv.removeAttribute('class');
         }
-      }, [blurOn]);
+    }, [blurOn]);
 
     const handleAddForm = () => {
         const newForms = [...forms, { expenses: [], total: null, result: null, noHead: null }];
@@ -62,14 +62,14 @@ const BudgetSplitter = () => {
 
     const handleAddExpenseEntry = () => {
         const updatedForms = [...forms];
-        updatedForms[activeFormIndex].expenses.push({ y: '', value: '' }); // Add an empty expense to the active form
+        updatedForms[activeFormIndex].expenses.push({ y: '', value: '' });
         setForms(updatedForms);
     };
 
 
     const handleDeleteExpenseEntry = (expenseIndex) => {
         const updatedForms = [...forms];
-        updatedForms[activeFormIndex].expenses.splice(expenseIndex, 1); // Remove the expense from the active form
+        updatedForms[activeFormIndex].expenses.splice(expenseIndex, 1);
         setForms(updatedForms);
     };
 
@@ -97,80 +97,63 @@ const BudgetSplitter = () => {
 
                         {isOverlayOpen && (
                             <div className='blur'>
-                            <div className='overlay'>
-                                <h2>{`Expense Form ${activeFormIndex + 1}`}</h2>
-                                {
-                                    console.log(forms)
-                                }
-                                <div className='cliNform'>
-                                    <div className="cli-output">
+                                <div className='overlay'>
+                                    <h2>{`Expense Form ${activeFormIndex + 1}`}</h2>
+                                    {
+                                        console.log(forms)
+                                    }
+                                    <div className='cliNform'>
+                                        <div className="cli-output">
 
-                                        {forms[activeFormIndex].expenses.length > 0 ? (
-                                            forms[activeFormIndex].expenses.map((expense, idx) => (
-                                                <div key={idx}>
-                                                    {`Expense ${idx + 1}: ${expense.name || 'No name'} - ₹${expense.value || '0'}`}
+                                            {forms[activeFormIndex].expenses.length > 0 ? (
+                                                forms[activeFormIndex].expenses.map((expense, idx) => (
+                                                    <div key={idx}>
+                                                        {`Expense ${idx + 1}: ${expense.name || 'No name'} - ₹${expense.value || '0'}`}
+                                                    </div>
+                                                ))
+                                            ) : (
+                                                <div>No expenses yet. Start adding some!</div>
+                                            )}
+
+                                            {forms[activeFormIndex].total !== null && (
+                                                <div className="total-display">
+                                                    <strong>{`Total: ₹${forms[activeFormIndex].total}`}</strong>
+                                                    <br />
+                                                    <strong>{`Result: ₹${forms[activeFormIndex].result} (Per Person)`}</strong>
                                                 </div>
-                                            ))
-                                        ) : (
-                                            <div>No expenses yet. Start adding some!</div>
-                                        )}
+                                            )}
+                                        </div>
 
-                                        {forms[activeFormIndex].total !== null && (
-                                            <div className="total-display">
-                                                <strong>{`Total: ₹${forms[activeFormIndex].total}`}</strong>
-                                                <br />
-                                                <strong>{`Result: ₹${forms[activeFormIndex].result} (Per Person)`}</strong>
-                                            </div>
-                                        )}
+                                        <form className="expense-calc-con">
+                                            <ExpenseEntryForm
+                                                expenses={forms[activeFormIndex].expenses}
+                                                handleChange={handleExpenseChange}
+                                                handleDeleteEntry={handleDeleteExpenseEntry}
+                                            />
+                                            <ButtonGroup
+                                                handleAddEntry={handleAddExpenseEntry}
+                                                handleSplit={handleSplitBudget}
+                                            />
+                                        </form>
                                     </div>
-
-                                    <form className="expense-calc-con">
-                                        <ExpenseEntryForm
-                                            expenses={forms[activeFormIndex].expenses}
-                                            handleChange={handleExpenseChange}
-                                            handleDeleteEntry={handleDeleteExpenseEntry}
+                                    <div className='backNhead'>
+                                        <button type="button" onClick={handleCloseOverlay}>Back</button>
+                                        <input
+                                            type="number"
+                                            name="noHead"
+                                            placeholder='No. P'
+                                            min='0'
+                                            value={forms[activeFormIndex].noHead}
+                                            onChange={(e) => handleHeadChange(e)}
+                                            onSubmit={(e) => console.log(e)}
                                         />
-                                        <ButtonGroup
-                                            handleAddEntry={handleAddExpenseEntry}
-                                            handleSplit={handleSplitBudget}
-                                        />
-                                    </form>
+                                    </div>
                                 </div>
-                                <div className='backNhead'>
-                                    <button type="button" onClick={handleCloseOverlay}>Back</button>
-                                    <input
-                                        type="number"
-                                        name="noHead"
-                                        placeholder='No. P'
-                                        min='0'
-                                        value={forms[activeFormIndex].noHead}
-                                        onChange={(e) => handleHeadChange(e)}
-                                        onSubmit={(e) => console.log(e)}
-                                    />
-                                </div>
-                            </div>
                             </div>
                         )}
                         <button type="button" onClick={handleAddForm}>Add New Form</button>
                         <button type="button" onClick={handleDeleteForm}>Delete Last Form</button>
                     </div>
-
-                    {/*
-
-            
-                        <form className="expense-calc-con">
-                            <ExpenseEntryForm
-                                expenses={forms[activeFormIndex].expenses}
-                                handleChange={handleExpenseChange}
-                                handleDeleteEntry={handleDeleteExpenseEntry}
-                            />
-                            <ButtonGroup
-                                handleAddEntry={handleAddExpenseEntry}
-                                handleSplit={handleSplitBudget}
-                            />
-                        </form>
-                        
-                    */}
                 </div>
             </div >
         </>

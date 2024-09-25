@@ -168,7 +168,6 @@ form {
   background: rgb(153, 151, 161);
 }
 
-/* Display total in bold */
 .total-display {
   margin-top: 20px;
   font-size: 1.2rem;
@@ -176,7 +175,6 @@ form {
   color: #ff4500;
 }
 
-/* Add button group styling */
 .button-group {
   display: flex;
   gap: 10px;
