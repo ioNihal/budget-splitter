@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
-
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -63,7 +62,7 @@ button, button:active {
 
 button:hover {
   border-color: #646cff;
-} 
+}
 
 button:focus,
 button:focus-visible {
@@ -82,5 +81,55 @@ button:focus-visible {
 
   button {
     background-color: #f9f9f9;
+  }
+}
+
+/* Responsive Design */
+
+/* For tablets and smaller devices */
+@media only screen and (max-width: 1024px) {
+  h1 {
+    font-size: 2.5em; /* Adjusted for tablets */
+  }
+
+  button {
+    font-size: 0.9em; /* Slightly smaller buttons for better fit */
+    padding: 0.5em 1em;
+  }
+
+  body {
+    padding: 10px;
+  }
+}
+
+/* For phones */
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 2em; /* Further reduce font size for smaller screens */
+  }
+
+  button {
+    font-size: 0.85em; 
+    padding: 0.4em 0.8em; /* Adjust button padding for phones */
+  }
+
+  body {
+    padding: 5px;
+  }
+}
+
+/* For small phones */
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.6em; /* Smallest font size for mobile */
+  }
+
+  button {
+    font-size: 0.75em;
+    padding: 0.3em 0.6em; /* Tighter button design for small screens */
+  }
+
+  body {
+    padding: 0; /* Remove body padding for very small screens */
   }
 }

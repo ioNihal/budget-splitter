@@ -18,3 +18,37 @@ button {
     font-style: normal;
     font-size: 1.2rem;
 }
+
+/* Responsive Design */
+
+/* For tablets and smaller devices */
+@media only screen and (max-width: 1024px) {
+    .btnExpense {
+        flex-direction: column; /* Stack buttons vertically for better display */
+        align-items: center;
+    }
+
+    button {
+        width: 20vw;  /* Increase button width for larger touch area */
+        font-size: 1rem; /* Adjust font size */
+        padding: 8px 12px;
+    }
+}
+
+/* For phones */
+@media only screen and (max-width: 768px) {
+    button {
+        width: 30vw;
+        font-size: 1rem;
+        padding: 8px 14px;
+    }
+}
+
+/* For small phones */
+@media only screen and (max-width: 480px) {
+    button {
+        width: 40vw;  /* Increase width for smaller screens */
+        font-size: 0.9rem;  /* Adjust font size */
+        padding: 10px 15px; /* Ensure buttons are easy to tap */
+    }
+}
