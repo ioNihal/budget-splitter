@@ -70,17 +70,14 @@
   justify-content: flex-start;
 }
 
-.overlay button {
-  padding: 0.6em 1.2em;
+.backNhead button {
+  font-size: 1.2rem;
+  padding: 10px;
+  width: 10vw;
 }
 
-.backNhead p {
-  font-family: "Fira Code", monospace !important;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+.backNhead input {
   font-size: 1.2rem;
-  color: rgb(41, 41, 41);
 }
 
 .backNhead input,
@@ -126,7 +123,6 @@ form {
   border-radius: 5px;
   color: rgb(129, 129, 129);
   margin: 1rem;
-  padding: 30px;
   cursor: pointer;
   text-align: center;
 }
@@ -173,7 +169,7 @@ form {
   gap: 10px;
 }
 
-.button-group button {
+.button-group button, .button-group  button:hover {
   padding: 10px;
   font-size: 1rem;
   cursor: pointer;
@@ -223,6 +219,7 @@ form {
     width: 100%;
     margin: 10px 0;
     justify-content: center;
+    flex-direction: column;
   }
 
   #budgetSplitter {
@@ -238,17 +235,17 @@ form {
   }
 
   .backNhead button {
-    width: 20vw !important;
+    width: 20vw;
   }
+
+  .left-pane button {
+   padding: 20px;
+   font-size: 1.2rem;
+  }
+  
 
   .total-display {
     font-size: 0.9rem;
-  }
-
-  .left-pane button, .left-pane button:hover {
-    padding: 10px;
-    font-size: 1.2rem;
-    width: auto;
   }
 
   .expense-entry {

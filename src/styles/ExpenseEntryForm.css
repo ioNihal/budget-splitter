@@ -11,11 +11,11 @@
     margin: 5px;
 }
 
-.delete-entry-btn {
+.expense-entry button {
     border: none;
     border-radius: 5px;
     color: rgb(129, 129, 129);
-    margin: -15px 2px;
+    margin: 5px 2px;
     padding: 0.6em 1.2em;
     width: 10vw;
     cursor: pointer;
