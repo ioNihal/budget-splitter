@@ -233,22 +233,22 @@ form {
     width: 95vw;
   }
 
-  .backNhead p {
-    font-size: 0.9rem;
+  .backNhead input {
+    font-size: 1.2rem;
+  }
+
+  .backNhead button {
+    width: 20vw !important;
   }
 
   .total-display {
     font-size: 0.9rem;
   }
 
-  .left-pane button {
-    padding: 20px;
+  .left-pane button, .left-pane button:hover {
+    padding: 10px;
     font-size: 1.2rem;
     width: auto;
-  }
-
-  .overlay button {
-    padding: 10px;
   }
 
   .expense-entry {

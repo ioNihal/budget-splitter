@@ -7,7 +7,7 @@
 .expense-entry input {
     width: 120px;
     height: 20px;
-    padding: 0.6em 1.2em !important;
+    padding: 0.6em 1.2em ;
     margin: 5px;
 }
 
@@ -16,7 +16,7 @@
     border-radius: 5px;
     color: rgb(129, 129, 129);
     margin: -15px 2px;
-    padding: 0.6em 1.2em !important;
+    padding: 0.6em 1.2em;
     width: 10vw;
     cursor: pointer;
     font-family: "Fira Code", monospace !important;
@@ -64,16 +64,18 @@
 
 /* For small phones */
 @media only screen and (max-width: 480px) {
+    .expense-entry {
+        justify-content: center;
+    }
     .expense-entry input {
         width: 120px;
         height: 22px;
         font-size: 0.8rem;
-        justify-content: center;
     }
 
-    .delete-entry-btn {
+    .expense-entry button, .expense-entry button:hover{
         width: auto;
-        font-size: 0.8rem;
+        font-size: 1.2rem;
         padding: 0.4em 0.8em;
     }
 }
