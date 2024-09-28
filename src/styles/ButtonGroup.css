@@ -47,7 +47,7 @@ button {
 /* For small phones */
 @media only screen and (max-width: 480px) {
     button {
-        width: 40vw;  /* Increase width for smaller screens */
+        width: auto;  /* Increase width for smaller screens */
         font-size: 0.9rem;  /* Adjust font size */
         padding: 10px 15px; /* Ensure buttons are easy to tap */
     }

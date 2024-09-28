@@ -39,7 +39,8 @@
   height: auto;
 }
 
-.left-pane, .right-pane {
+.left-pane,
+.right-pane {
   margin: 20px 10px;
 }
 
@@ -70,7 +71,7 @@
 }
 
 .overlay button {
-  padding: 0.6em 1.2em !important;
+  padding: 0.6em 1.2em;
 }
 
 .backNhead p {
@@ -82,9 +83,10 @@
   color: rgb(41, 41, 41);
 }
 
-.backNhead input, .backNhead input:focus {
+.backNhead input,
+.backNhead input:focus {
   width: 40px;
-  padding: 0.6em 1.2em !important;
+  padding: 0.6em 1.2em;
   background-color: #1a1a1a;
   border: none !important;
   outline: none !important;
@@ -178,8 +180,10 @@ form {
 }
 
 /* Responsive Design */
-@media only screen and (max-width: 1024px) {
-  .left-pane, .right-pane {
+@media (min-width:769px) and (max-width: 1024px) {
+
+  .left-pane,
+  .right-pane {
     width: 100%;
   }
 
@@ -188,13 +192,14 @@ form {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media (min-width:481px) and (max-width: 768px) {
   .splitter-layout {
     flex-direction: column;
     align-items: center;
   }
 
-  .left-pane, .right-pane {
+  .left-pane,
+  .right-pane {
     width: 90%;
   }
 
@@ -212,9 +217,16 @@ form {
 }
 
 @media only screen and (max-width: 480px) {
-  .left-pane, .right-pane {
+
+  .left-pane,
+  .right-pane {
     width: 100%;
     margin: 10px 0;
+    justify-content: center;
+  }
+
+  #budgetSplitter {
+    align-items: center;
   }
 
   .overlay {
@@ -231,6 +243,20 @@ form {
 
   .left-pane button {
     padding: 20px;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+    width: auto;
+  }
+
+  .overlay button {
+    padding: 10px;
+  }
+
+  .expense-entry {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .cliNform {
+    flex-direction: column;
   }
 }

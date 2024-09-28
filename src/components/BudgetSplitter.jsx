@@ -89,6 +89,8 @@ const BudgetSplitter = () => {
             <div className="container" id="budgetSplitter">
                 <div className="splitter-layout">
                     <div className="left-pane">
+                        <button type="button" onClick={handleAddForm}>Add New Form</button>
+                        <button type="button" onClick={handleDeleteForm}>Delete Last Form</button>
                         {forms.map((form, index) => (
                             <button key={index} onClick={() => handleFormClick(index)}>
                                 {`Form ${index + 1}`}
@@ -151,8 +153,6 @@ const BudgetSplitter = () => {
                                 </div>
                             </div>
                         )}
-                        <button type="button" onClick={handleAddForm}>Add New Form</button>
-                        <button type="button" onClick={handleDeleteForm}>Delete Last Form</button>
                     </div>
                 </div>
             </div >
