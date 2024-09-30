@@ -70,14 +70,14 @@
     }
 
     .expense-entry input {
-        width: 120px;
+        max-width: 120px;
+        width: auto;
         height: 22px;
         font-size: 0.8rem;
     }
 
     .expense-entry input:nth-child(2) {
-
-        width: 50px;
+        max-width: 50px;
     }
 
     .expense-entry button,
