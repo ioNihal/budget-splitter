@@ -110,8 +110,9 @@
         grid-template-rows: 20% 80%;
     }
 
-    .left-sec {
-        margin-left: 0;
+    .left-sec,
+    .right-sec {
+        margin: 0;
     }
 
     .left-sec h1 {
@@ -159,8 +160,9 @@
         grid-template-rows: 20% 80%;
     }
 
-    .left-sec {
-        margin-left: 0;
+    .left-sec,
+    .right-sec {
+        margin: 0;
     }
 
     .left-sec h1 {
