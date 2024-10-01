@@ -24,6 +24,11 @@
   align-content: space-around;
   width: 100%;
   height: auto;
+  overflow-y: auto;
+
+  flex: 1;
+  margin:0;
+  padding:0;
 }
 
 .left-pane {
@@ -174,6 +179,19 @@ form {
   padding: 10px;
   font-size: 1rem;
   cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #111111;
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
 }
 
 /*

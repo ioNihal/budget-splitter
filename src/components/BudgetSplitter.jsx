@@ -174,6 +174,9 @@ const BudgetSplitter = () => {
                         )}
                     </div>
                 </div>
+                <footer className="footer">
+                    This website is created by Nihal K,<br /> BCA A4 Batch,<br /> Register No 03SU22SD224
+                </footer>
             </div >
         </>
     );
