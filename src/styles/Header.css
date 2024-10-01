@@ -115,6 +115,10 @@
         margin: 0;
     }
 
+    .right-sec {
+        margin-bottom: 10vh;
+    }
+
     .left-sec h1 {
         width: 100vw;
         font-size: 2rem;
@@ -163,6 +167,10 @@
     .left-sec,
     .right-sec {
         margin: 0;
+    }
+
+    .right-sec {
+        margin-bottom: 10vh;
     }
 
     .left-sec h1 {
