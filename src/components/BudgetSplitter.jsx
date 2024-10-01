@@ -35,6 +35,24 @@ const BudgetSplitter = () => {
         }
     };
 
+    const handleDeleteThis = (index) => {
+        if (forms.length > 1) {
+            const confirmDelete = window.confirm("Are you sure you want to delete this form?");
+
+            if (confirmDelete) {
+                const newForms = forms.filter((_, i) => i !== index);
+                setForms(newForms);
+                setActiveFormIndex(Math.max(index - 1, 0));
+
+                setIsOverlayOpen(false);
+                setBlurOn(false)
+            }
+        } else {
+            window.alert("You cannot delete the last remaining form.");
+        }
+    };
+
+
     const handleFormClick = (index) => {
         setActiveFormIndex(index);
         //setBlurOn(true)
@@ -135,6 +153,7 @@ const BudgetSplitter = () => {
                                             <ButtonGroup
                                                 handleAddEntry={handleAddExpenseEntry}
                                                 handleSplit={handleSplitBudget}
+                                                handleDeleteThis={() => handleDeleteThis(activeFormIndex)}
                                             />
                                         </form>
                                     </div>

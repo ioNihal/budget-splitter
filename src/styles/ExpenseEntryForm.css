@@ -28,11 +28,10 @@
 
 /* Responsive Design */
 
-/* For tablets and smaller devices */
+/* For tablets and smaller devices 
 @media (min-width:769px) and (max-width: 1024px) {
     .expense-entry {
         flex-direction: column;
-        /* Stack elements vertically */
         align-items: flex-start;
     }
 
@@ -47,19 +46,30 @@
         padding: 0.5em 1em;
     }
 }
+*/
 
 /* For phones */
 @media (min-width:481px) and (max-width: 768px) {
-    .expense-entry input {
-        width: 140px;
-        height: 25px;
-        font-size: 0.9rem;
+    .expense-entry {
+        justify-content: center;
     }
 
-    .delete-entry-btn {
-        width: 30vw;
-        font-size: 1rem;
-        padding: 0.5em 1em;
+    .expense-entry input {
+        max-width: 120px;
+        width: auto;
+        height: 22px;
+        font-size: 0.8rem;
+    }
+
+    .expense-entry input:nth-child(2) {
+        max-width: 50px;
+    }
+
+    .expense-entry button,
+    .expense-entry button:hover {
+        width: auto;
+        font-size: 1.2rem;
+        padding: 0.4em 0.8em;
     }
 }
 

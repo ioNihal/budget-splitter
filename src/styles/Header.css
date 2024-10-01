@@ -11,7 +11,8 @@
 .left-sec {
     display: grid;
     place-items: center;
-    margin-left: 15vw;
+    margin-left: auto;
+    margin-right: 10%;
 }
 
 .left-sec h1 {
@@ -26,6 +27,9 @@
     flex-direction: column;
     justify-content: center;
     align-content: space-around;
+
+    margin-left: 10%;
+    margin-right: auto;
 }
 
 .about-con h1 {
@@ -68,13 +72,11 @@
 
 /* Responsive Design */
 
-/* For tablets and smaller devices */
+/* For tablets and smaller devices 
 @media (min-width: 769px) and (max-width: 1024px) {
     #landing {
         grid-template-columns: 1fr;
-        /* Stack sections vertically */
         grid-template-rows: 50% 50%;
-        /* Adjust row height */
     }
 
     .left-sec {
@@ -99,25 +101,54 @@
         font-size: 1rem;
     }
 }
+*/
 
 /* For phones */
 @media (min-width: 481px) and (max-width: 768px) {
+    #landing {
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 80%;
+    }
+
+    .left-sec {
+        margin-left: 0;
+    }
+
     .left-sec h1 {
-        width: 60vw;
+        width: 100vw;
         font-size: 2rem;
+        text-align: center;
+        max-width: auto;
+    }
+
+    .about-con {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        height: 70vh;
     }
 
     .about-con h1 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
 
     .about-con h3 {
-        font-size: 1.5rem;
+        font-size: 1.2rem !important;
     }
 
     .about-con button {
-        width: 30vw;
-        font-size: 1rem;
+        width: 50vw;
+        font-size: 2rem;
+        padding: 10px;
+    }
+
+    .about-con button:hover,
+    .about-con :active {
+        width: 50vw;
+        font-size: 2rem;
+        padding: 10px;
     }
 }
 

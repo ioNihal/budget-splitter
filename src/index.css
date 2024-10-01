@@ -92,13 +92,13 @@ button:focus-visible {
 /* Responsive Design */
 
 /* For tablets and smaller devices */
-@media only screen and (max-width: 1024px) {
+@media  (min-width: 769px) and (max-width: 1024px) {
   h1 {
-    font-size: 2.5em; /* Adjusted for tablets */
+    font-size: 2.5em;
   }
 
   button {
-    font-size: 0.9em; /* Slightly smaller buttons for better fit */
+    font-size: 1.3em; 
     padding: 0.5em 1em;
   }
 
@@ -108,14 +108,14 @@ button:focus-visible {
 }
 
 /* For phones */
-@media only screen and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
   h1 {
-    font-size: 2em; /* Further reduce font size for smaller screens */
+    font-size: 2em;
   }
 
   button {
     font-size: 0.85em; 
-    padding: 0.4em 0.8em; /* Adjust button padding for phones */
+    padding: 0.4em 0.8em; 
   }
 
   body {
@@ -126,15 +126,15 @@ button:focus-visible {
 /* For small phones */
 @media only screen and (max-width: 480px) {
   h1 {
-    font-size: 1.6em; /* Smallest font size for mobile */
+    font-size: 1.6em; 
   }
 
   button {
     font-size: 0.75em;
-    padding: 0.3em 0.6em; /* Tighter button design for small screens */
+    padding: 0.3em 0.6em; 
   }
 
   body {
-    padding: 0; /* Remove body padding for very small screens */
+    padding: 0; 
   }
 }

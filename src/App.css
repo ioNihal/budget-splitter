@@ -169,13 +169,14 @@ form {
   gap: 10px;
 }
 
-.button-group button, .button-group  button:hover {
+.button-group button,
+.button-group button:hover {
   padding: 10px;
   font-size: 1rem;
   cursor: pointer;
 }
 
-/* Responsive Design */
+/*
 @media (min-width:769px) and (max-width: 1024px) {
 
   .left-pane,
@@ -186,29 +187,51 @@ form {
   .overlay {
     width: 80vw;
   }
-}
+}*/
 
 @media (min-width:481px) and (max-width: 768px) {
-  .splitter-layout {
-    flex-direction: column;
-    align-items: center;
-  }
 
   .left-pane,
   .right-pane {
-    width: 90%;
+    width: 100%;
+    margin: 10px 0;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #budgetSplitter {
+    align-items: center;
   }
 
   .overlay {
-    width: 90vw;
+    width: 95vw;
   }
 
-  .backNhead p {
-    font-size: 1rem;
+  .backNhead input {
+    font-size: 1.2rem;
   }
+
+  .backNhead button {
+    width: 20vw;
+  }
+
+  .left-pane button {
+    padding: 20px;
+    font-size: 1.2rem;
+  }
+
 
   .total-display {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .expense-entry {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .cliNform {
+    flex-direction: column;
   }
 }
 
@@ -239,10 +262,10 @@ form {
   }
 
   .left-pane button {
-   padding: 20px;
-   font-size: 1.2rem;
+    padding: 20px;
+    font-size: 1.2rem;
   }
-  
+
 
   .total-display {
     font-size: 0.9rem;
