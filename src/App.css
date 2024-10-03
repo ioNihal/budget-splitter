@@ -444,7 +444,7 @@ footer {
 
   .button-group button,
   .button-group button:hover {
-    width: auto;
+    width: 90%;
     font-size: 1.2rem;
     margin: 2px;
     padding: 8px;
