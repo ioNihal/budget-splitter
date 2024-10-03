@@ -27,8 +27,8 @@
   overflow-y: auto;
 
   flex: 1;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 .left-pane {
@@ -101,21 +101,11 @@
 .expense-calc-con {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: auto;
+  justify-content: space-around;
+  height: 100%;
   width: auto;
-  overflow-y: auto;
-  scroll-behavior: smooth;
 }
 
-.expense-calc-con::-webkit-scrollbar {
-  background: rgb(39, 39, 39);
-  width: 5px;
-}
-
-.expense-calc-con::-webkit-scrollbar-thumb {
-  background: rgb(153, 151, 161);
-}
 
 form {
   display: flex;
@@ -136,8 +126,7 @@ form {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  min-height: 40vh;
-  height: auto;
+  height: 50vh;
 }
 
 .cli-output {
@@ -170,15 +159,9 @@ form {
 }
 
 .button-group {
+  height: 20%;
   display: flex;
   gap: 10px;
-}
-
-.button-group button,
-.button-group button:hover {
-  padding: 10px;
-  font-size: 1rem;
-  cursor: pointer;
 }
 
 footer {
@@ -194,6 +177,76 @@ footer {
   font-size: 1rem;
 }
 
+
+/*Form CSS*/
+.expense-entry {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.expense-input {
+  max-height: 80%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  margin: 0 auto;
+}
+
+.expense-input::-webkit-scrollbar {
+  background: rgb(39, 39, 39);
+  width: 5px;
+}
+
+.expense-input::-webkit-scrollbar-thumb {
+  background: rgb(153, 151, 161);
+}
+
+.expense-entry input {
+  width: 120px;
+  height: 20px;
+  padding: 0.6em 1.2em;
+  margin: 5px;
+}
+
+.expense-entry button {
+  border: none;
+  border-radius: 5px;
+  color: rgb(129, 129, 129);
+  margin: 5px 2px;
+  padding: 0.6em 1.2em;
+  width: 10vw;
+  cursor: pointer;
+  font-family: "Fira Code", monospace !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+
+/*Button GRoups*/
+
+.btnExpense {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button-group button,
+.button-group button:hover {
+  border: none;
+  border-radius: 5px;
+  color: rgb(129, 129, 129);
+  padding: 0.5rem;
+  width: auto;
+  height: 60%;
+  cursor: pointer;
+  font-family: "Fira Code", monospace !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+
 /*
 @media (min-width:769px) and (max-width: 1024px) {
 
@@ -205,10 +258,21 @@ footer {
   .overlay {
     width: 80vw;
   }
+
+   .btnExpense {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-group button,
+    .button-group button:hover {
+        width: 20vw;
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
 }*/
 
 @media (min-width:481px) and (max-width: 768px) {
-
   .left-pane,
   .right-pane {
     width: 100%;
@@ -243,6 +307,10 @@ footer {
     font-size: 0.9rem;
   }
 
+  .expense-input {
+    max-height: 50%;
+  }
+
   .expense-entry {
     display: flex;
     flex-direction: row;
@@ -250,7 +318,48 @@ footer {
 
   .cliNform {
     flex-direction: column;
+    justify-content: center;
   }
+
+  .expense-entry {
+    justify-content: center;
+  }
+
+  .expense-entry input {
+    max-width: 120px;
+    width: auto;
+    height: 22px;
+    font-size: 0.8rem;
+  }
+
+  .expense-entry input:nth-child(2) {
+    max-width: 50px;
+  }
+
+  .expense-entry button,
+  .expense-entry button:hover {
+    width: auto;
+    font-size: 1.2rem;
+    padding: 0.4em 0.8em;
+  }
+
+  .button-group {
+    height: auto;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .button-group button,
+  .button-group button:hover {
+    width: 90%;
+    font-size: 1.2rem;
+    margin: 2px;
+    padding: 8px;
+    height: auto;
+  }
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -289,6 +398,10 @@ footer {
     font-size: 0.9rem;
   }
 
+  .expense-input {
+    max-height: 50%;
+  }
+
   .expense-entry {
     display: flex;
     flex-direction: row;
@@ -296,5 +409,45 @@ footer {
 
   .cliNform {
     flex-direction: column;
+    justify-content: center;
+  }
+
+  .expense-entry {
+    justify-content: center;
+  }
+
+  .expense-entry input {
+    max-width: 120px;
+    width: auto;
+    height: 22px;
+    font-size: 0.8rem;
+  }
+
+  .expense-entry input:nth-child(2) {
+    max-width: 50px;
+  }
+
+  .expense-entry button,
+  .expense-entry button:hover {
+    width: auto;
+    font-size: 1.2rem;
+    padding: 0.4em 0.8em;
+  }
+
+  .button-group {
+    height: auto;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .button-group button,
+  .button-group button:hover {
+    width: 90%;
+    font-size: 1.2rem;
+    margin: 2px;
+    padding: 8px;
+    height: auto;
   }
 }

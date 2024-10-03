@@ -159,10 +159,11 @@ const BudgetSplitter = () => {
                                     </div>
                                     <div className='backNhead'>
                                         <button type="button" onClick={handleCloseOverlay}>Back</button>
+                                        <span>No of Persons &nbsp; &nbsp;</span>
                                         <input
                                             type="number"
                                             name="noHead"
-                                            placeholder='No. P'
+                                            placeholder='NO.OFHEADS'
                                             min='1'
                                             value={forms[activeFormIndex].noHead}
                                             onChange={(e) => handleHeadChange(e)}
