@@ -10,6 +10,10 @@
   align-items: center;
 }
 
+#budgetSplitter {
+  height: auto;
+}
+
 .expense-form-container {
   display: flex;
   flex-direction: column;
