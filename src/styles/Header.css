@@ -66,7 +66,7 @@
 }
 
 .about-con button:hover,
-.about-con :active {
+.about-con button:active {
     font-size: 1.2rem;
 }
 
@@ -150,7 +150,7 @@
     }
 
     .about-con button:hover,
-    .about-con :active {
+    .about-con button:active {
         width: 50vw;
         font-size: 2rem;
         padding: 10px;
@@ -204,7 +204,7 @@
     }
 
     .about-con button:hover,
-    .about-con :active {
+    .about-con button:active {
         width: 50vw;
         font-size: 2rem;
         padding: 10px;
