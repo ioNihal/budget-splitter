@@ -177,6 +177,13 @@ footer {
   font-size: 1rem;
 }
 
+footer p {
+  text-align: justify;
+  color: #f18035;
+  width: 90vw;
+  margin: 5px auto;
+}
+
 
 /*Form CSS*/
 .expense-entry {
@@ -273,6 +280,7 @@ footer {
 }*/
 
 @media (min-width:481px) and (max-width: 768px) {
+
   .left-pane,
   .right-pane {
     width: 100%;
@@ -415,6 +423,7 @@ footer {
   .expense-calc-con {
     height: 80%
   }
+
   .expense-entry {
     justify-content: center;
   }
