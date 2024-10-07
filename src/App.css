@@ -291,6 +291,7 @@ footer p {
 
   #budgetSplitter {
     align-items: center;
+    height: auto;
   }
 
   .overlay {
@@ -316,7 +317,7 @@ footer p {
   }
 
   .expense-input {
-    max-height: 50%;
+    max-height: 30%;
   }
 
   .expense-entry {
@@ -327,6 +328,10 @@ footer p {
   .cliNform {
     flex-direction: column;
     justify-content: center;
+  }
+
+  .expense-calc-con {
+    height: 80%
   }
 
   .expense-entry {
@@ -367,7 +372,6 @@ footer p {
     padding: 8px;
     height: auto;
   }
-
 }
 
 @media only screen and (max-width: 480px) {
@@ -382,6 +386,7 @@ footer p {
 
   #budgetSplitter {
     align-items: center;
+    height: auto;
   }
 
   .overlay {
