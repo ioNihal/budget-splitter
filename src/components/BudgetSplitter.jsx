@@ -178,15 +178,15 @@ const BudgetSplitter = () => {
                 <footer className="footer">
                     This website is created by Nihal K,<br /> BCA A4 Batch,<br /> Register No 03SU22SD224
 
-                    <p>
+                    <p> <br />
                         Expense Splitting Web Application <b>(BudgetSplitter) </b>
-                        This dynamic expense splitting web application, built with ReactJS, simplifies the process of dividing expenses among multiple people. Key features include:
+                        This dynamic expense splitting web application, built with ReactJS, simplifies the process of dividing expenses among multiple people. <br /> <br /> Key features include: <br />
 
-                        Dynamic Form Creation: Users can create multiple expense calculation forms, each tailored to different groups or events.
-                        Persistent State: The state of all forms is maintained until the page is reloaded, ensuring that users don’t lose their data during their session.
-                        Flexible Management: Users can easily add new forms or delete existing ones, providing flexibility and control over their expense tracking.
-                        User-Friendly Interface: The application features an intuitive and responsive design, making it easy for users to navigate and manage their expenses.
-                        Real-Time Calculations: Expenses are calculated in real-time as users input their data, providing immediate feedback and accuracy.
+                        <b> Dynamic Form Creation: </b> Users can create multiple expense calculation forms, each tailored to different groups or events. <br />
+                        <b> Persistent State: </b> The state of all forms is maintained until the page is reloaded, ensuring that users don’t lose their data during their session. <br />
+                        <b> Flexible Management: </b> Users can easily add new forms or delete existing ones, providing flexibility and control over their expense tracking. <br />
+                        <b> User-Friendly Interface: </b> The application features an intuitive and responsive design, making it easy for users to navigate and manage their expenses. <br />
+                        <b> Real-Time Calculations: </b> Expenses are calculated in real-time as users input their data, providing immediate feedback and accuracy. <br /> <br />
                         This application is designed to be user-friendly and efficient, making it an ideal tool for managing shared expenses in various scenarios.
                     </p>
                 </footer>
