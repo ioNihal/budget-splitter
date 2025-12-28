@@ -1,4 +1,4 @@
-import React from 'react';
+
 import BudgetSplitter from './components/BudgetSplitter';
 
 const App = () => {
