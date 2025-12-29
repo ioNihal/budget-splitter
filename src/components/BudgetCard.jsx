@@ -7,7 +7,7 @@ const BudgetCard = ({ index, total, expenseCount, onClick, onDelete }) => {
             className="bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-orange-900/20 transition duration-300 border border-slate-700 flex flex-col justify-between h-48 relative group"
             onClick={onClick}
         >
-            <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+            <div className="absolute top-4 right-4 xl:opacity-0 group-hover:xl:opacity-100 transition-opacity">
                 <button
                     onClick={(e) => { e.stopPropagation(); onDelete(); }}
                     className="text-slate-500 hover:text-red-500 p-1 rounded-full hover:bg-slate-700"
